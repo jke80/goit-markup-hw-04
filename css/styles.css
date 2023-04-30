@@ -9,6 +9,7 @@
   --backgraund-color: #ffffff;
   --hero-backgraund-color: #2f303a;
   --team-backgraund-color: #f5f4fa;
+  --icon-fill-color: #afb1b8;
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -102,6 +103,9 @@ body {
 }
 .auth-nav .link {
   color: var(--font-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .site-nav .link:hover,
 .site-nav .link:focus,
@@ -117,12 +121,20 @@ body {
   color: var(--site-accent-color);
 }
 
+.auth-nav-icon {
+  fill: currentColor;
+}
+.auth-nav-icon:hover {
+  fill: var(--site-accent-color);
+}
 /* hero */
 .hero {
   background-color: var(--hero-backgraund-color);
   padding-top: 200px;
   padding-bottom: 200px;
-max-width: 1600px;
+  width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   background-image: -webkit-linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
@@ -191,6 +203,16 @@ max-width: 1600px;
   line-height: 1.71;
   margin: 0;
 }
+.features .thumb {
+  width: 270px;
+  height: 120px;
+  background: var(--team-backgraund-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Box */
 .box {
@@ -219,7 +241,7 @@ max-width: 1600px;
   margin-top: 0;
   margin-bottom: 50px;
 }
-.team .list {
+.team > .container > .list {
   display: flex;
   gap: 30px;
 }
@@ -247,9 +269,67 @@ max-width: 1600px;
 .team-text {
   text-align: center;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
 }
-
+.team-card-title .list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.socials-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.socials-link:hover {
+  background-color: var(--site-accent-color);
+}
+.team .socials-icon {
+  fill: var(--icon-fill-color);
+}
+.socials-link:hover .socials-icon {
+  fill: var(--logo-color-white);
+}
+/* clients */
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.clients-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-font-color);
+}
+.clients-list {
+  display: flex;
+  gap: 30px;
+}
+.clients-list .thumb {
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-fill-color);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.client-icon {
+  fill:var(--icon-fill-color);
+}
+.clients-list .link:hover .client-icon {
+fill: var(--site-accent-color);
+}
+.clients-list .link:hover .thumb {
+border-color: var(--site-accent-color);
+}
 /* portfolio */
 .page-portfolio {
   padding-top: 94px;
