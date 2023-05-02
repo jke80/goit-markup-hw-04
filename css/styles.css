@@ -313,7 +313,7 @@ body {
   display: flex;
   gap: 30px;
 }
-.clients-list .thumb {
+.clients-link {
   width: 170px;
   height: 92px;
   border: 1px solid var(--icon-fill-color);
@@ -322,16 +322,16 @@ body {
   justify-content: center;
   align-items: center;
 }
-.client-icon {
-  fill:var(--icon-fill-color);
+.clients-icon {
+  fill: var(--icon-fill-color);
 }
-.clients-list .link:hover .client-icon,
-.clients-list .link:focus .client-icon {
-fill: var(--site-accent-color);
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--site-accent-color);
 }
-.clients-list .link:hover .thumb,
-.clients-list .link:focus .thumb {
-border-color: var(--site-accent-color);
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--site-accent-color);
 }
 /* portfolio */
 .page-portfolio {
@@ -373,13 +373,17 @@ border-color: var(--site-accent-color);
 }
 .works-item {
   flex-basis: calc((100% - 2 * 30px) / 3);
-  overflow: hidden;
 }
-.works-item:hover,
-.works-item:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+.works-link {
+  display: block;
+  text-decoration-line: none;
 }
-.works-item .link> div {
+.works-link:hover,
+.works-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.works-link > div {
   padding: 20px 24px;
   border-right: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
@@ -409,12 +413,12 @@ border-color: var(--site-accent-color);
 }
 .footer .container {
   display: flex;
-}
-.footer .container>div:first-child {
-  width: 231px;
+  align-items: baseline;
+  gap: 70px;
 }
 .footer address {
   margin-top: 28px;
+  width: 231px;
 }
 .footer address li {
   margin-bottom: 12px;
@@ -439,24 +443,18 @@ border-color: var(--site-accent-color);
   line-height: 1.71;
   text-decoration-line: none;
 }
-.footer-socials {
-  padding-top: 12px;
-  padding-left: 70px;
-}
 .footer-socials p {
-font-weight: 700;
-font-size: 14px;
-line-height: calc(16/14);
-letter-spacing: 0.03em;
-text-transform: uppercase;
-color: var(--hero-title-color);
-margin-top: 0;
-
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--hero-title-color);
+  margin-top: 0;
 }
 .footer-socials ul {
   display: flex;
   gap: 10px;
-
 }
 .footer-socials .socials-link {
   background: rgba(255, 255, 255, 0.1);
